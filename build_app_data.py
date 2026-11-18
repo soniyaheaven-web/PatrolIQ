@@ -63,10 +63,13 @@ try:
     runs.to_csv("data/app/mlflow_runs.csv", index=False)
     print("MLflow runs exported:", runs.shape)
 
+    client = MlflowClient()
+    reg_model = client.get_registered_model("PatrolIQ_KMeans_Hotspots")
+    alias_map = dict(reg_model.aliases)   # {"champion": "1"}
     reg = []
-    for v in MlflowClient().search_model_versions("name='PatrolIQ_KMeans_Hotspots'"):
+    for v in client.search_model_versions("name='PatrolIQ_KMeans_Hotspots'"):
         reg.append({"name": v.name, "version": v.version,
-                    "aliases": list(getattr(v, "aliases", [])),
+                    "aliases": [a for a, ver in alias_map.items() if str(ver) == str(v.version)],
                     "tags": dict(v.tags), "run_id": v.run_id})
     with open("data/app/model_registry.json", "w") as f:
         json.dump(reg, f, indent=2)

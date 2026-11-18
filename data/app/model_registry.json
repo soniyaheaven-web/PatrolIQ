@@ -2,7 +2,9 @@
   {
     "name": "PatrolIQ_KMeans_Hotspots",
     "version": 1,
-    "aliases": [],
+    "aliases": [
+      "champion"
+    ],
     "tags": {
       "k": "9",
       "task": "geographic hotspots"
