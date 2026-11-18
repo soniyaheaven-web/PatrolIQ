@@ -51,8 +51,8 @@ with t1:
     a, b = st.columns(2)
     fig = px.line(km, x="p_n_clusters", y="m_silhouette", markers=True,
                   title="K-Means silhouette vs k (higher is better)")
-    fig.add_hline(y=0.5, line_dash="dash", annotation_text="Target 0.5")
-    fig.add_vline(x=9, line_dash="dot", annotation_text="Selected k=9")
+    fig.add_hline(y=0.5, line_dash="dash", annotation_text="Target 0.5", annotation_position="bottom right")
+    fig.add_vline(x=9, line_dash="dot", annotation_text="Selected k=9", annotation_position="top left")
     a.plotly_chart(fig)
     fig = px.line(km, x="p_n_clusters", y="m_davies_bouldin", markers=True,
                   title="K-Means Davies-Bouldin vs k (lower is better)")
