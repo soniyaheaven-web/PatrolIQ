@@ -1,0 +1,12 @@
+[
+  {
+    "name": "PatrolIQ_KMeans_Hotspots",
+    "version": 1,
+    "aliases": [],
+    "tags": {
+      "k": "9",
+      "task": "geographic hotspots"
+    },
+    "run_id": "ddff19d0cd114a8fbd5aa968c3ca8abe"
+  }
+]

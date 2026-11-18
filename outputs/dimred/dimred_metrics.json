@@ -1,0 +1,16 @@
+{
+  "n_features": 25,
+  "var_2_components": 0.3159723929062111,
+  "var_3_components": 0.4152850108063091,
+  "components_for_70pct": 9,
+  "components_for_80pct": 11,
+  "recon_mse": {
+    "2": 0.6838651053322393,
+    "3": 0.58457148450169,
+    "9": 0.2612275645548141,
+    "11": 0.1820530526794523
+  },
+  "tsne_kl_divergence": 2.014237403869629,
+  "sample_size": 10000,
+  "umap_done": true
+}

@@ -1,0 +1,4 @@
+algorithm,params,clusters,noise_%,silhouette,davies_bouldin
+K-Means,k=9,9,0.0,0.4109,0.7894
+DBSCAN,"eps=0.8km, min_samples=100",5,0.8,0.095,0.4745
+Hierarchical (Ward),"k=9, sample=5000",9,0.0,0.3674,0.8511
